@@ -70,10 +70,14 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
           type: approval
           requires:
             - build
       - deploy:
           requires:
             - hold
+          type: approval
+          filters:
+            breanches:
+              only: main
