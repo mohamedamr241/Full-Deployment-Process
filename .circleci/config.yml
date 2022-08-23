@@ -79,5 +79,5 @@ workflows:
             - hold
           type: approval
           filters:
-            breanches:
+            branches:
               only: main
