@@ -71,13 +71,13 @@ workflows:
             branches:
               only:
                 - main
-          type: approval
+
           requires:
             - build
       - deploy:
           requires:
             - hold
-          type: approval
+
           filters:
             branches:
               only: main
