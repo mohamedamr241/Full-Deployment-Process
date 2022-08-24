@@ -57,7 +57,7 @@ jobs:
       DB_PORT: 5432
       POSTGRES_HOST: database-1.cqll9ouwnpz2.us-east-1.rds.amazonaws.com
       AWS_REGION: us-east-1
-      AWS_PROFILE: mohamedamr241
+      AWS_PROFILE: default
       AWS_BUCKET: udagram1234
       URL: http://localhost
       JWT_SECRET: hello123
