@@ -12,7 +12,8 @@
     "dev": "ts-node --transpile-only ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
-    "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
+    "env": "eb setenv POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=medo2244 POSTGRES_DB=db_1 PORT=3000 DB_PORT=5432 POSTGRES_HOST=database-1.cqll9ouwnpz2.us-east-1.rds.amazonaws.com AWS_REGION=us-east-1 AWS_PROFILE=default AWS_BUCKET=udagram1234 URL=http://localhost JWT_SECRET=hello123 AWS_ACCESS_KEY_ID=AKIAU7TVOYCS5EGAFB6L AWS_SECRET_ACCESS_KEY=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",
+    "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy && npm run env",
     "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && bestzip ../final.zip * && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
