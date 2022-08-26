@@ -60,7 +60,7 @@ jobs:
           # TODO: Install, build, deploy in both apps
           command: |
             eb deploy
-
+      - run:
           name: Deploy FrontEnd App
           # TODO: Install, build, deploy in both apps
           command: |
